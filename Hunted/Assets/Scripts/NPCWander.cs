@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NPCWander : MonoBehaviour
 {
-    //Movement presets - adjust in unity
+    // Movement presets - adjust in unity
     public float moveSpeed = 1f;
     public float moveTime = 2f;
     public float waitTime = 1.5f;
@@ -12,6 +12,10 @@ public class NPCWander : MonoBehaviour
     private float moveTimer;
     private float waitTimer;
     private bool isMoving = false;
+
+    // Clamp presets
+    public float minX = -1.5f;
+    public float maxX = 1.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,7 +50,8 @@ public class NPCWander : MonoBehaviour
                 ChooseNewDirection();
             }
         }
-        
+
+        ClampPosition();
     }
 
     void ChooseNewDirection()
@@ -63,5 +68,19 @@ public class NPCWander : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x) * randomDir;
         transform.localScale = scale;
+    }
+
+    void ClampPosition()
+    {
+        // Clamp position
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        transform.position = pos;
+
+        // If the NPC hits a boundary, make it turn around
+        if (pos.x <= minX || pos.x >= maxX)
+        {
+            bool isMoving = false;
+        }
     }
 }

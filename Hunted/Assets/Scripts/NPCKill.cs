@@ -23,7 +23,7 @@ public class NPCKill : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (promptWorld != null)
+        if (promptWorld != null && promptWorld.TryGetComponent(out TextMeshProUGUI tmp))
             promptWorld.SetActive(playerNear);
     }
 
@@ -57,7 +57,7 @@ public class NPCKill : MonoBehaviour
         if (promptWorld != null)
         {
             // Follow NPC
-            promptWorld.transform.position = transform.position + new Vector3(0, 1.5f, 0);
+            promptWorld.transform.position = transform.position + new Vector3(1.5f, .5f, 0);
             promptWorld.transform.LookAt(Camera.main.transform);
             promptWorld.transform.Rotate(0, 180, 0);
         }
