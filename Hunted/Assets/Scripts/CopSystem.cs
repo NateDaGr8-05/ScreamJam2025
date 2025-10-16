@@ -7,7 +7,8 @@ public class CopSystem : MonoBehaviour
     private double copDist = -50;
     public GameObject cop;
     public bool copSpawned = false;
-    private int coplevel = 1;
+    public int coplevel = 1;
+    GameObject newCop;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,16 +42,23 @@ public class CopSystem : MonoBehaviour
             switch(coplevel)
             {
                 case 1:
-                    GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
+                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
+                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
                     break;
                 case 2:
                     //level2 cops
+                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
+                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
                     break;
                 case 3:
                     //level3 cops
+                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
+                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
                     break;
                 case 4:
                     //level4 cops
+                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
+                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
                     break;
             }  
         }

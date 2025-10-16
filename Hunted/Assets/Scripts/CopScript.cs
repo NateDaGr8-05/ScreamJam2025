@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.Burst.Intrinsics.X86.Avx;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
@@ -7,7 +9,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
     double timeOffscreen = 0;
     public GameObject player;
     public GameObject floor;
-    private int direction = 1;
+    public int direction = 1;
+    bool shooting = false;
+    public GameObject bullet;
+    private GameObject newBullet;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,23 +32,36 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        //determine player direction
         if (transform.position.x <= player.transform.position.x)
         {
             direction = 1;
-            
         }
         else
         {
             direction = -1;
         }
+        //flip sprite
+        Vector3 flip = transform.localScale;
+        transform.localScale = new Vector3(flip.x*direction, flip.y);
+        //move
         transform.position += new Vector3((1*direction), 0, 0);
+        //chance to shoot if wanted is high enough
+        if(copSystem.coplevel > 1)
+        {
+            if (1 == Random.Range(1, 121))
+            {
+                newBullet = GameObject.Instantiate(bullet, new Vector2(transform.position.x + (2*direction), transform.position.y), Quaternion.identity);
+                newBullet.GetComponent<BulletScript>().copDirection = direction;
+            }
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)//jump when obstacles are hit
     {
         if (collision.collider != floor.GetComponent<Collider2D>())
         {
-            
             transform.position += new Vector3((2*direction), 3, 0);
         }
     }
