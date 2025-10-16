@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     // Movement
-    public float moveSpeed = 8f;
-    public float jumpForce = 14f;
+    private float baseSpeed = 4f;
+    public float moveSpeed;
+    public float jumpForce = 7f;
     private float moveInput;
 
     // Ground checking
@@ -17,15 +19,25 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
 
     // Health
-    private float MaxHealth = 10f;
+    private float maxHealth = 10f;
     public float currentHealth;
+    public float healthRestore = 3f;
 
-    // Weapon Slot
+    // Weapon Slot - TODO
+    public GameObject equippedWeapon;
+
+    // Rage Effects
+    public bool isRaging = false;
+    public float rageSpeedMult = 2f;
+    public float rageDuration = 10f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+        moveSpeed = baseSpeed;
     }
 
     // Update is called once per frame
@@ -61,5 +73,33 @@ public class PlayerController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.y *= -1;
         transform.localScale = Scaler;
+    }
+
+    // activates rage and then applies boosts in update
+    public void ActivateRage()
+    {
+        if (!isRaging)
+            StartCoroutine(RageRoutine());
+    }
+
+    private IEnumerator RageRoutine()
+    {
+        isRaging = true;
+
+        // Apply rage effects
+        moveSpeed = baseSpeed * rageSpeedMult;
+        currentHealth = Mathf.Min(currentHealth + healthRestore, maxHealth);
+
+        // Rage duration
+        float timer = 0f;
+        while (timer < rageDuration)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        // Reset effects
+        moveSpeed = baseSpeed;
+        isRaging = false;
     }
 }

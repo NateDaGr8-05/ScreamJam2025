@@ -82,8 +82,10 @@ public class RageMeter : MonoBehaviour
         currentRage = 1f;
         UpdateUI();
 
-        // You can trigger rage mode visuals or gameplay boosts here
-        //Debug.Log("rage active");
+        // Activate player rage buffs
+        PlayerController player = FindFirstObjectByType<PlayerController>();
+        if (player != null)
+            player.ActivateRage();
 
         // Stay at full rage for the duration
         float timer = 0f;
