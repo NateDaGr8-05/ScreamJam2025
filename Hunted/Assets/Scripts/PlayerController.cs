@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce = 7f;
     private float moveInput;
-    private bool canJump = true;
 
     // Ground checking
     public Transform groundCheck;
@@ -24,8 +23,10 @@ public class PlayerController : MonoBehaviour
     public float currentHealth;
     public float healthRestore = 3f;
 
-    // Weapon Slot - TODO
-    public GameObject equippedWeapon;
+    // Weapon Slot 
+    public Transform weaponHolder;  //empty child
+    public Weapon equippedWeapon;   //weapon prefab
+    private Weapon equippedWeaponInstance;
 
     // Rage Effects
     public bool isRaging = false;
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         moveSpeed = baseSpeed;
+
+        EquipWeapon(equippedWeapon);
     }
 
     // Update is called once per frame
@@ -46,44 +49,45 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        // Flip sprite direction
-        if (facingRight == false && moveInput > 0)
-            Flip();
-        else if (facingRight == true && moveInput < 0)
-            Flip();
-
-        // Ground check
+        // Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        if (isGrounded)
-        {
-            canJump = true;
-        }
+        // Flip sprite direction
+        if (!facingRight && moveInput > 0)
+            Flip();
+        else if (facingRight && moveInput < 0)
+            Flip();
 
         // Jump
-        if (Input.GetButtonDown("Jump") && isGrounded && canJump)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             player.linearVelocity = new Vector2(player.linearVelocity.x, jumpForce);
-            canJump = false;
         }
 
         // Move
         player.linearVelocity = new Vector2(moveInput * moveSpeed, player.linearVelocity.y);
 
-        // Ground check
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        //Attack
+        HandleAttack();
+    }
 
-        if (isGrounded) 
-        { 
-            canJump = true; 
+
+    void HandleAttack()
+    {
+        // Left mouse to attack
+        if (Input.GetButtonDown("Fire1") && equippedWeaponInstance != null)
+        {
+            Debug.Log("I am attacking");
+            equippedWeaponInstance.Attack();
         }
     }
+
 
     void Flip()
     {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
-        Scaler.y *= -1;
+        Scaler.x *= -1;
         transform.localScale = Scaler;
     }
 
@@ -113,5 +117,15 @@ public class PlayerController : MonoBehaviour
         // Reset effects
         moveSpeed = baseSpeed;
         isRaging = false;
+    }
+
+    public void EquipWeapon(Weapon newWeapon)
+    {
+        if (newWeapon != null)
+        {
+            // Instantiate weapon as child of weaponHolder
+            equippedWeaponInstance = Instantiate(newWeapon, weaponHolder.position, weaponHolder.rotation, weaponHolder);
+            equippedWeaponInstance.playerTransform = transform;
+        }
     }
 }

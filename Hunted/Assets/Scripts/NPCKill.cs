@@ -4,9 +4,6 @@ using TMPro;
 
 public class NPCKill : MonoBehaviour
 {
-    // is the player touching?
-    private bool playerNear = false;
-
     // health
     public float maxHealth = 10f;
     public float currentHealth;
@@ -25,7 +22,11 @@ public class NPCKill : MonoBehaviour
 
         if (healthBarPrefab != null)
         {
-            spawnedHealthBar = Instantiate(healthBarPrefab, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+            spawnedHealthBar = Instantiate(
+                healthBarPrefab,
+                transform.position + new Vector3(0, 1f, 0),
+                Quaternion.identity
+            );
             healthSlider = spawnedHealthBar.GetComponentInChildren<Slider>();
 
             if (healthSlider != null)
@@ -36,15 +37,11 @@ public class NPCKill : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        // Player kills NPC
-        if (playerNear && Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamage(2f); // change to weapon specfic damage later
-        }
-
+       
     }
 
     /// <summary>
@@ -83,31 +80,6 @@ public class NPCKill : MonoBehaviour
 
         // Destroy NPC
         Destroy(gameObject);
-    }
-
-
-    /// <summary>
-    /// switches bool depending on if player is in range or not
-    /// </summary>
-    /// <param name="other"></param>
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerNear = true;
-        }
-    }
-
-    /// <summary>
-    /// switches bool if player falls out of range
-    /// </summary>
-    /// <param name="other"></param>
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerNear = false;
-        }
     }
 
     void LateUpdate()
