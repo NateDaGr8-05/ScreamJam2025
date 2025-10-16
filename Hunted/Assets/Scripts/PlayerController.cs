@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce = 7f;
     private float moveInput;
+    private bool canJump = true;
 
     // Ground checking
     public Transform groundCheck;
@@ -51,20 +52,31 @@ public class PlayerController : MonoBehaviour
         else if (facingRight == true && moveInput < 0)
             Flip();
 
+        // Ground check
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        if (isGrounded)
+        {
+            canJump = true;
+        }
+
         // Jump
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && canJump)
         {
             player.linearVelocity = new Vector2(player.linearVelocity.x, jumpForce);
+            canJump = false;
         }
-    }
 
-    void FixedUpdate()
-    {
         // Move
         player.linearVelocity = new Vector2(moveInput * moveSpeed, player.linearVelocity.y);
 
         // Ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        if (isGrounded) 
+        { 
+            canJump = true; 
+        }
     }
 
     void Flip()

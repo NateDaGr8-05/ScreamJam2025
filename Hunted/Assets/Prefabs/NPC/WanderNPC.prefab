@@ -240,4 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650f954ac6012684dbf5a98ee41d51de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
   promptWorld: {fileID: 695970976176980687, guid: 9ae75985947891546a6478f272aaa284, type: 3}
+  healthBarPrefab: {fileID: 3500819104488884864, guid: c701675a836fcc942a0235956aff870e, type: 3}
