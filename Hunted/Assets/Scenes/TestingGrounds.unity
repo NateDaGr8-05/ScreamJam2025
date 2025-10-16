@@ -461,6 +461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WanderNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 8950239802266759409, guid: e9062a164eec77d4da297751e024b756, type: 3}
+      propertyPath: m_TagString
+      value: Hitbox
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -760,6 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1285914947}
   - component: {fileID: 1285914946}
+  - component: {fileID: 1285914948}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -800,6 +805,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1285914948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285914945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2151fa66f8c5b2341bcfcfa2223ccf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1749047305}
+  cop: {fileID: 2862320930536350228, guid: 5160ea85c9b995e4daafc8c850de7848, type: 3}
+  copSpawned: 0
+  coplevel: 1
 --- !u!114 &1496028965 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5328781661639349064, guid: 34d3c1d5defefe548972a137935c93b0, type: 3}
@@ -890,6 +911,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1749047305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3212680689789897792, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
+  m_PrefabInstance: {fileID: 4382049072730757804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2030230950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -982,6 +1008,10 @@ PrefabInstance:
     - target: {fileID: 4385833005977646298, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
       propertyPath: jumpForce
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385833005977646298, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
+      propertyPath: checkRadius
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4385833005977646298, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
       propertyPath: groundCheck

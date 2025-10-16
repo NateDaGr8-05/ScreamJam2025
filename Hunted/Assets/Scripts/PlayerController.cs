@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
 
     // Ground checking
-    public Transform groundCheck;
-    public float checkRadius = 0.2f;
-    public LayerMask whatIsGround;
-    private bool isGrounded;
+    //public Transform groundCheck;
+    //public float checkRadius = 0.2f;
+    //public LayerMask whatIsGround;
+    private bool isGrounded = false;
 
     private Rigidbody2D player;
     private bool facingRight = true;
@@ -50,7 +50,8 @@ public class PlayerController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
 
         // Check if grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        //Debug.Log(isGrounded);
 
         // Flip sprite direction
         if (!facingRight && moveInput > 0)
@@ -126,6 +127,22 @@ public class PlayerController : MonoBehaviour
             // Instantiate weapon as child of weaponHolder
             equippedWeaponInstance = Instantiate(newWeapon, weaponHolder.position, weaponHolder.rotation, weaponHolder);
             equippedWeaponInstance.playerTransform = transform;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
         }
     }
 }

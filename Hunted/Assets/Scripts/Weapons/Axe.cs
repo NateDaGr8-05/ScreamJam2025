@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Axe : Weapon
 {
     public LayerMask enemyLayer; // set to NPC in inspector
+    private HashSet<NPCKill> hitNPC = new HashSet<NPCKill>();
 
     private void Start()
     {
@@ -19,16 +21,23 @@ public class Axe : Weapon
             return;
         }
 
+        // reset list right before swing
+        hitNPC.Clear();
+
         // Detect enemies within range
         Collider2D[] hits = Physics2D.OverlapCircleAll(playerTransform.position, range, enemyLayer);
 
         foreach (Collider2D hit in hits)
         {
-            NPCKill npc = hit.GetComponent<NPCKill>();
-            if (npc != null)
+            if (hit.CompareTag("Hitbox"))
             {
-                Debug.Log("damage: " + damage);
-                npc.TakeDamage(damage);
+                NPCKill npc = hit.GetComponent<NPCKill>();
+                if (npc != null && !hitNPC.Contains(npc))
+                {
+                    Debug.Log("damage: " + damage);
+                    npc.TakeDamage(damage);
+                    hitNPC.Add(npc);    // mark as hit to not deal double damage
+                }
             }
         }
 

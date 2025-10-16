@@ -258,5 +258,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fleeSpeed: 3
-  fleeDuration: 4
+  fleeDuration: 5
   playerTag: Player
