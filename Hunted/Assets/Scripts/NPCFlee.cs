@@ -25,7 +25,10 @@ public class NPCFlee : MonoBehaviour
         if (isFleeing && player != null)
         {
             Vector2 currentPos = rb.position;
-            Vector2 fleeDir = (currentPos - (Vector2)player.transform.position).normalized;
+            Vector2 fleeDir = (currentPos - (Vector2)player.transform.position);
+
+            fleeDir.y = 0;
+            fleeDir = fleeDir.normalized;
 
             // Calculate new position if moving
             Vector2 nextPos = currentPos + fleeDir * fleeSpeed * Time.fixedDeltaTime;
