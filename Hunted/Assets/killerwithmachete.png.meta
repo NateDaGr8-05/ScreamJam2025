@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      killerwithmachete_0: -7550963839816775021
+      killerwithmachete_1: 7524599052452911180
+      killerwithmachete_2: -4629538427774561700
+      killerwithmachete_3: 599720231820249591
+      killerwithmachete_4: -6471176795345122969
+      killerwithmachete_5: 1204220322328396682
+      killerwithmachete_6: -5770660549675389284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

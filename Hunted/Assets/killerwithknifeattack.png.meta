@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      killerwithknifeattack_0: 4362864913934876177
+      killerwithknifeattack_1: 5532846055675261262
+      killerwithknifeattack_2: 1798622955291025878
+      killerwithknifeattack_3: -4487586498940296816
+      killerwithknifeattack_4: -3693245528946280328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

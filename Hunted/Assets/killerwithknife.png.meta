@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      killerwithknife_0: -3669097859451127676
+      killerwithknife_1: 2345939236558099756
+      killerwithknife_2: 785265576654465408
+      killerwithknife_3: -6092478307993842056
+      killerwithknife_4: -2340711306918410474
+      killerwithknife_5: -8299434600522358307
+      killerwithknife_6: -4913977742189471780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

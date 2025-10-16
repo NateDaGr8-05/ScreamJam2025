@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 9687685bb7a1cf8448f94eb8156434c6
+guid: 0689cc60d1f4f3943b2418970e2bc66b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2115340344929662562
-    second: killer_0
+      213: -7448426153680649436
+    second: civilian2_0
   - first:
-      213: -2736641098393376985
-    second: killer_1
+      213: 2482198548677366463
+    second: civilian2_1
   - first:
-      213: 3080032873578677602
-    second: killer_2
+      213: 8010401952397673479
+    second: civilian2_2
   - first:
-      213: -8971616050818625868
-    second: killer_3
+      213: -3204444861473830991
+    second: civilian2_3
   - first:
-      213: 2334339888082964679
-    second: killer_4
+      213: 310743775498097423
+    second: civilian2_4
   - first:
-      213: 7405666536874179511
-    second: killer_5
+      213: -3327716362057738111
+    second: civilian2_5
   - first:
-      213: 7035936154069646094
-    second: killer_6
+      213: -3216860654139996642
+    second: civilian2_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: killer_0
+      name: civilian2_0
       rect:
         serializedVersion: 2
         x: 415
@@ -146,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e994a61f92dc4a2e0800000000000000
-      internalID: -2115340344929662562
+      spriteID: 423c22e60efd1a890800000000000000
+      internalID: -7448426153680649436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killer_1
+      name: civilian2_1
       rect:
         serializedVersion: 2
         x: 1439
@@ -168,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 727278c9b6f750ad0800000000000000
-      internalID: -2736641098393376985
+      spriteID: fb297e3cd6a827220800000000000000
+      internalID: 2482198548677366463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killer_2
+      name: civilian2_2
       rect:
         serializedVersion: 2
         x: 2399
@@ -190,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 265ce2e64997eba20800000000000000
-      internalID: 3080032873578677602
+      spriteID: 70442c0822aaa2f60800000000000000
+      internalID: 8010401952397673479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killer_3
+      name: civilian2_3
       rect:
         serializedVersion: 2
         x: 351
@@ -212,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4be43c54cba6e7380800000000000000
-      internalID: -8971616050818625868
+      spriteID: 1b7c68950668783d0800000000000000
+      internalID: -3204444861473830991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killer_4
+      name: civilian2_4
       rect:
         serializedVersion: 2
         x: 1439
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c0d536a2cd356020800000000000000
-      internalID: 2334339888082964679
+      spriteID: f035ab241dbff4400800000000000000
+      internalID: 310743775498097423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killer_5
+      name: civilian2_5
       rect:
         serializedVersion: 2
         x: 2399
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bbf1677a7636c660800000000000000
-      internalID: 7405666536874179511
+      spriteID: 1881b46899391d1d0800000000000000
+      internalID: -3327716362057738111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killer_6
+      name: civilian2_6
       rect:
         serializedVersion: 2
         x: 351
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0b36a577aaa4a160800000000000000
-      internalID: 7035936154069646094
+      spriteID: e160e0a574a6b53d0800000000000000
+      internalID: -3216860654139996642
       vertices: []
       indices: 
       edges: []
@@ -297,14 +297,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      killer_0: -2115340344929662562
-      killer_1: -2736641098393376985
-      killer_2: 3080032873578677602
-      killer_3: -8971616050818625868
-      killer_4: 2334339888082964679
-      killer_5: 7405666536874179511
-      killer_6: 7035936154069646094
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
