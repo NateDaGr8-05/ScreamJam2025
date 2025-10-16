@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D player;
     private bool facingRight = true;
 
+    // Health
+    private float MaxHealth = 10f;
+    public float currentHealth;
+
+    // Weapon Slot
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

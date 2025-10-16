@@ -21,10 +21,16 @@ public class NPCKill : MonoBehaviour
         if (playerNear && Input.GetKeyDown(KeyCode.Q))
         {
             Destroy(gameObject);
+
+            // Add rage to meter
+            RageMeter rage = FindFirstObjectByType<RageMeter>();
+            if (rage != null) 
+            { 
+                rage.AddRage();
+                
+            }
         }
 
-        if (promptWorld != null && promptWorld.TryGetComponent(out TextMeshProUGUI tmp))
-            promptWorld.SetActive(playerNear);
     }
 
 
