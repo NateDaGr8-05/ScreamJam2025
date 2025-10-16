@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,12 +147,12 @@ TextureImporter:
       name: killerwithmachete_0
       rect:
         serializedVersion: 2
-        x: 415
-        y: 2079
-        width: 322
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: killerwithmachete_1
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 2079
-        width: 322
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: killerwithmachete_2
       rect:
         serializedVersion: 2
-        x: 2399
-        y: 2079
-        width: 354
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: killerwithmachete_3
       rect:
         serializedVersion: 2
-        x: 351
-        y: 1055
-        width: 322
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: killerwithmachete_4
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 1055
-        width: 322
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: killerwithmachete_5
       rect:
         serializedVersion: 2
-        x: 2399
-        y: 1055
-        width: 482
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: killerwithmachete_6
       rect:
         serializedVersion: 2
-        x: 351
-        y: 31
-        width: 482
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -301,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 90e8a129beaca59469af2b1930de793f
     internalID: 0
     vertices: []
     indices: 
