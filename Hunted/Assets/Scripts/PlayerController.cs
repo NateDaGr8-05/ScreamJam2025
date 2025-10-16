@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public float rageSpeedMult = 2f;
     public float rageDuration = 10f;
 
+    // Animation
+    Animator animator;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,6 +45,9 @@ public class PlayerController : MonoBehaviour
         moveSpeed = baseSpeed;
 
         EquipWeapon(equippedWeapon);
+
+        //Get Animator component
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -70,6 +76,11 @@ public class PlayerController : MonoBehaviour
 
         //Attack
         HandleAttack();
+
+        // Animation
+
+        float move = Input.GetAxisRaw("Horizontal");
+        animator.SetBool("isWalking", move != 0);
     }
 
 

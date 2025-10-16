@@ -147,12 +147,12 @@ TextureImporter:
       name: killerwithknife_0
       rect:
         serializedVersion: 2
-        x: 415
-        y: 2079
-        width: 226
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: killerwithknife_1
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 2079
-        width: 226
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: killerwithknife_2
       rect:
         serializedVersion: 2
-        x: 2399
-        y: 2079
-        width: 258
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: killerwithknife_3
       rect:
         serializedVersion: 2
-        x: 351
-        y: 1055
-        width: 258
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: killerwithknife_4
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 1055
-        width: 226
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: killerwithknife_5
       rect:
         serializedVersion: 2
-        x: 2399
-        y: 1055
-        width: 386
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: killerwithknife_6
       rect:
         serializedVersion: 2
-        x: 351
-        y: 31
-        width: 386
-        height: 930
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -301,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 02a8061f8d71f2c4ea9d66c86e9d4c07
     internalID: 0
     vertices: []
     indices: 
