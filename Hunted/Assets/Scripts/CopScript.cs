@@ -23,7 +23,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         //checks offscreen and destroys cop after a short period offscreen, changes copSpawned in CopSystem
-        if (gameObject.transform.position.x < player.transform.position.x - 10)
+        if (gameObject.transform.position.x < -9)
         {
             timeOffscreen += .1 * Time.deltaTime;
             if (timeOffscreen > 100)
@@ -43,9 +43,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
         //flip sprite
         Vector3 flip = transform.localScale;
-        transform.localScale = new Vector3(Mathf.Abs(flip.x)*direction, flip.y, 1);
+        transform.localScale = new Vector3(flip.x*direction, flip.y);
         //move
-        transform.position += new Vector3((1*(float)direction/100), 0, 0);
+        transform.position += new Vector3((1*direction), 0, 0);
         //chance to shoot if wanted is high enough
         if(copSystem.coplevel > 1)
         {
@@ -60,17 +60,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)//jump when obstacles are hit
     {
-        if (collision.collider == player.GetComponent<Collider2D>())
+        if (collision.collider != floor.GetComponent<Collider2D>())
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            transform.position += new Vector3((2*direction), 3, 0);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)//kill player
+    {
+        if (other.CompareTag("Player"))
+        {
             //gameover
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
             //restarts
-        }
-        else if (collision.collider != floor.GetComponent<Collider2D>())
-        {
-            transform.position += new Vector3((2*direction), 3, 0);
         }
     }
 }
