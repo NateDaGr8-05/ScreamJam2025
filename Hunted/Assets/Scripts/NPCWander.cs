@@ -31,10 +31,11 @@ public class NPCWander : MonoBehaviour
 
         //Animation
         animator = GetComponent<Animator>();
-        lastPosition = npc.position;//this???
+        lastPosition = npc.position;//something probably in this script is causing the npcs to all spawn near the camera.
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
         if (isMoving)
