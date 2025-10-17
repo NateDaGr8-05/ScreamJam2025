@@ -14,7 +14,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     bool shooting = false;
     public GameObject bullet;
     private GameObject newBullet;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
 
@@ -68,8 +68,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.collider == player.GetComponent<Collider2D>())//kill player
         {
             //gameover
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.name);
+            SceneManager.LoadScene("StartScreen");
             //restarts
         }
         else if (collision.collider != floor.GetComponent<Collider2D>())//jump when obstacles are hit

@@ -10,7 +10,7 @@ public class CopSystem : MonoBehaviour
     public int coplevel = 1;
     GameObject newCop;
     public GameObject floor;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
         
