@@ -25,16 +25,17 @@ public class NPCWander : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        npc = GetComponent<Rigidbody2D>();
+        npc = gameObject.GetComponent<Rigidbody2D>();
         waitTimer = waitTime;
         ChooseNewDirection();
 
         //Animation
         animator = GetComponent<Animator>();
-        lastPosition = npc.position;
+        lastPosition = npc.position;//something probably in this script is causing the npcs to all spawn near the camera.
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
         if (isMoving)
