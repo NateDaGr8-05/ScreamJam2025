@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioSource audio;
+
     // Movement
     private float baseSpeed = 4f;
     public float moveSpeed;
@@ -49,6 +51,8 @@ public class PlayerController : MonoBehaviour
 
         //Get Animator component
         animator = GetComponent<Animator>();
+
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -104,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("Attack");
+            audio.Play();
         }
     }
 
