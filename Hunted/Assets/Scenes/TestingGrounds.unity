@@ -1730,6 +1730,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 733945342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1185037388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1643737377488917238, guid: 34d3c1d5defefe548972a137935c93b0, type: 3}
@@ -1748,6 +1749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1749047305}
+=======
+>>>>>>> parent of a24c1cd (added more trees, sky, cop animation, added startscreen scene to project)
 --- !u!1 &1285914945
 GameObject:
   m_ObjectHideFlags: 0
