@@ -19,7 +19,7 @@ public class BulletScript : MonoBehaviour
     {
         //movement
         transform.position += new Vector3((10 * Time.deltaTime * copDirection), 0, 0);
-        if (transform.position.x > Camera.main.transform.position.x+9 || transform.position.x < Camera.main.transform.position.x - 9)
+        if (transform.position.x > Camera.main.transform.position.x + 11 || transform.position.x < Camera.main.transform.position.x - 11)
         {
             Destroy(gameObject);
             return;

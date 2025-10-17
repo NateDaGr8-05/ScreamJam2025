@@ -32,7 +32,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         //checks offscreen and destroys cop after a short period offscreen, changes copSpawned in CopSystem
-        if (transform.position.x < player.transform.position.x - 8.5)
+        if (transform.position.x < player.transform.position.x - 10)
         {
             timeOffscreen += 1 * Time.deltaTime;
             if (timeOffscreen > 5)
