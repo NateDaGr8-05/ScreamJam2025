@@ -69,6 +69,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             player.linearVelocity = new Vector2(player.linearVelocity.x, jumpForce);
+
+            // Start jump animation
+            animator.SetBool("isJumping", true);
+        }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Ground"))
+            {
+                Debug.Log("Landed on ground");
+                isGrounded = true;
+                // End the jump animation
+                animator.SetBool("isJumping", false);
+            }
         }
 
         // Move
@@ -77,10 +91,14 @@ public class PlayerController : MonoBehaviour
         //Attack
         HandleAttack();
 
-        // Animation
-
+        // More Animation
         float move = Input.GetAxisRaw("Horizontal");
         animator.SetBool("isWalking", move != 0);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
 
