@@ -14,18 +14,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
     bool shooting = false;
     public GameObject bullet;
     private GameObject newBullet;
-
-    //Animation
-    private Rigidbody2D rb;
-    private Animator animator;
-    private Vector2 lastPosition;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        lastPosition = rb.position;
+
     }
 
     // Update is called once per frame
@@ -68,19 +60,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 newBullet.GetComponent<BulletScript>().copDirection = direction;
             }
 
-        }
-
-        //Animation
-        float moveDistance = (rb.position - lastPosition).magnitude;
-
-        if (moveDistance > 0.02f)
-        {
-            animator.SetBool("isWalking", true);
-            lastPosition = rb.position;
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
         }
     }
 
