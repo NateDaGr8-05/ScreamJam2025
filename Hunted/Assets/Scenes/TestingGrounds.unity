@@ -87288,6 +87288,7 @@ GameObject:
   - component: {fileID: 1534226824}
   - component: {fileID: 1534226826}
   - component: {fileID: 1534226825}
+  - component: {fileID: 1534226827}
   m_Layer: 3
   m_Name: PoliceCar (70)
   m_TagString: Ground
@@ -87411,6 +87412,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1534226827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534226823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2cc3b238679c046921ebb4fd3c6ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536628473
 GameObject:
   m_ObjectHideFlags: 0
@@ -105287,6 +105300,7 @@ GameObject:
   - component: {fileID: 1846217723}
   - component: {fileID: 1846217725}
   - component: {fileID: 1846217724}
+  - component: {fileID: 1846217726}
   m_Layer: 3
   m_Name: PoliceCar (70)
   m_TagString: Ground
@@ -105410,6 +105424,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1846217726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846217722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2cc3b238679c046921ebb4fd3c6ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1847060812
 GameObject:
   m_ObjectHideFlags: 0
