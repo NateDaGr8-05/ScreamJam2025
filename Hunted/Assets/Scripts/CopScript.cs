@@ -58,7 +58,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Vector3 flip = transform.localScale;
         transform.localScale = new Vector3(Mathf.Abs(flip.x) * direction, flip.y, 1);
         //move
-        transform.position += new Vector3((1 * (float)direction / 200), 0, 0);
+        transform.position += new Vector3((3 * Time.deltaTime * (float)direction), 0, 0);
         //chance to shoot if wanted is high enough
         if (copManager.GetComponent<CopSystem>().coplevel > 1)
         {
@@ -94,7 +94,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
         else if (collision.collider != floor.GetComponent<Collider2D>())//jump when obstacles are hit
         {
-            transform.position += new Vector3(0, 2, 0);
+            transform.position += new Vector3(1, 2, 0);
         }
     }
 }
