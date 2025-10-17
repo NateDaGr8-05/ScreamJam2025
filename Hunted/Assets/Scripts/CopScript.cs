@@ -14,7 +14,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     bool shooting = false;
     public GameObject bullet;
     private GameObject newBullet;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
 

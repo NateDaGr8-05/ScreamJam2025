@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public int copDirection = 1;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
         //flip sprite
