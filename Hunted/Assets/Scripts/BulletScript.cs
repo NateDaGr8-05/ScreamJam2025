@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public int copDirection;
+    public int copDirection = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,7 +18,12 @@ public class BulletScript : MonoBehaviour
     void Update()
     {
         //movement
-        transform.position += new Vector3((1 * Time.deltaTime * copDirection), 0, 0);
+        transform.position += new Vector3((10 * Time.deltaTime * copDirection), 0, 0);
+        if (transform.position.x > Camera.main.transform.position.x+9 || transform.position.x < Camera.main.transform.position.x - 9)
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 
     //gets destroy on collisions

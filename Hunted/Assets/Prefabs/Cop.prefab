@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7729219964909644870}
   - component: {fileID: 3499458362290343570}
-  - component: {fileID: 4180740409738811896}
   - component: {fileID: -2577344494180473875}
+  - component: {fileID: 7490416425160845518}
+  - component: {fileID: 557999045693562601}
   m_Layer: 0
   m_Name: Cop
   m_TagString: Untagged
@@ -89,22 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4180740409738811896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862320930536350228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 083c2e73290f7e441833c760ca7cbcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3212680689789897792, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
-  floor: {fileID: 3214525445192036419, guid: de81b1b5827e48a46af22de72af1680f, type: 3}
-  direction: 1
-  bullet: {fileID: 4245011795857486468, guid: 52307023a725ac14baa2a60e0664676e, type: 3}
 --- !u!50 &-2577344494180473875
 Rigidbody2D:
   serializedVersion: 5
@@ -131,4 +116,58 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &7490416425160845518
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862320930536350228}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!114 &557999045693562601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862320930536350228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083c2e73290f7e441833c760ca7cbcc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOffscreen: 0
+  player: {fileID: 0}
+  floor: {fileID: 0}
+  direction: 1
+  bullet: {fileID: 4245011795857486468, guid: 52307023a725ac14baa2a60e0664676e, type: 3}
