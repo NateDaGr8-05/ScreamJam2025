@@ -62,9 +62,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //chance to shoot if wanted is high enough
         if (copManager.GetComponent<CopSystem>().coplevel > 1)
         {
-            if (1 == Random.Range(1, 551))
+            if (1 == Random.Range(1, 651))
             {
-                newBullet = GameObject.Instantiate(bullet, new Vector2(transform.position.x + (2 * direction), transform.position.y), Quaternion.Euler(new Vector3(0, 0, 90)));
+                newBullet = GameObject.Instantiate(bullet, new Vector2(transform.position.x + (2 * direction), transform.position.y + 2), Quaternion.Euler(new Vector3(0, 0, 90)));
                 newBullet.GetComponent<BulletScript>().copDirection = direction;
             }
 
