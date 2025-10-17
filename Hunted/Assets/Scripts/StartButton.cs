@@ -16,7 +16,22 @@ public class StartButton : MonoBehaviour
     }
     public void OnStartButtonClicked()
     {
-        Debug.Log("Start button clicked!");
-        SceneManager.LoadScene("TestingGrounds");
+        int scene = Random.Range(1, 4);
+        switch (scene)
+        {
+            case 1:
+                //change to scene #1 name
+                SceneManager.LoadScene("TestingGrounds");
+                break;
+            case 2:
+                //change to scene #2 name
+                SceneManager.LoadScene("TestingGrounds");
+                break;
+            case 3:
+                //change to scene #3 name
+                SceneManager.LoadScene("TestingGrounds");
+                break;
+        }
+        
     }
 }
