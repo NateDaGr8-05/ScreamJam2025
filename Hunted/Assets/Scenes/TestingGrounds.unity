@@ -135,13 +135,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FleeNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4885569718058805789, guid: e8e1f0e6357057c4b8b430da11e00503, type: 3}
+      propertyPath: m_TagString
+      value: Hitbox
+      objectReference: {fileID: 0}
     - target: {fileID: 8603197767675727984, guid: e8e1f0e6357057c4b8b430da11e00503, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.7839508
       objectReference: {fileID: 0}
     - target: {fileID: 8603197767675727984, guid: e8e1f0e6357057c4b8b430da11e00503, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.162177
+      value: -2.59
       objectReference: {fileID: 0}
     - target: {fileID: 8603197767675727984, guid: e8e1f0e6357057c4b8b430da11e00503, type: 3}
       propertyPath: m_LocalPosition.z
@@ -522,6 +526,30 @@ PrefabInstance:
     - target: {fileID: 2262024171761846075, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960031896797880533, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960031896797880533, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960031896797880533, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073717293510386719, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073717293510386719, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073717293510386719, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3687935408273533910, guid: 5f6019b2df689764f902286b020b37b4, type: 3}
       propertyPath: m_Name
