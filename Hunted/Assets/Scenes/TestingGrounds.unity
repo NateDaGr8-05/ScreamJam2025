@@ -13534,6 +13534,22 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2276533462642967803, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
+      propertyPath: m_Size.x
+      value: 6.47985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276533462642967803, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
+      propertyPath: m_Size.y
+      value: 29.286322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276533462642967803, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.035583973
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276533462642967803, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
+      propertyPath: m_Offset.y
+      value: 14.354495
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276533462642967803, guid: 8e03db63254dfec4082ee0cbb56e848a, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
