@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2577344494180473875}
   - component: {fileID: 7490416425160845518}
   - component: {fileID: 557999045693562601}
+  - component: {fileID: 7504972210338689525}
   m_Layer: 0
   m_Name: Cop
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.87, y: -0.97, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 46f1721d401545e4d80069e02095b1e4, type: 3}
+  m_Sprite: {fileID: 1254972078360548749, guid: d6631943ea19c6f4dafcc93c392b2ff7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,8 +167,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083c2e73290f7e441833c760ca7cbcc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  copManager: {fileID: 0}
   timeOffscreen: 0
   player: {fileID: 0}
   floor: {fileID: 0}
   direction: 1
   bullet: {fileID: 4245011795857486468, guid: 52307023a725ac14baa2a60e0664676e, type: 3}
+--- !u!95 &7504972210338689525
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862320930536350228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37f6da02d5588914e84e8980346fd83f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
