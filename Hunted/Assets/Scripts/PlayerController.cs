@@ -165,6 +165,10 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+        else if (collision.gameObject.CompareTag("Bullet"))
+        {
+            currentHealth -= 1;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
