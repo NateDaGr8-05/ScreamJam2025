@@ -10,30 +10,30 @@ public class CopSystem : MonoBehaviour
     public int coplevel = 1;
     GameObject newCop;
     public GameObject floor;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
         
     }
-
+//test
     // Update is called once per frame
     void Update()
     {
         //represents cops chasing player while offscreen
         if (!copSpawned)
         {
-            copDist += 3 * Time.deltaTime;
+            copDist += 4 * Time.deltaTime;
         }
         //tracks real time for wanted levels
-        if(Time.realtimeSinceStartup > 270)
+        if(Time.realtimeSinceStartup > 120)
         {
             coplevel = 4;
         }
-        else if (Time.realtimeSinceStartup > 180)
+        else if (Time.realtimeSinceStartup > 80)
         {
             coplevel = 3;
         }
-        else if (Time.realtimeSinceStartup > 90)
+        else if (Time.realtimeSinceStartup > 40)
         {
             coplevel = 2;
         }
@@ -44,29 +44,32 @@ public class CopSystem : MonoBehaviour
             switch(coplevel)
             {
                 case 1:
-                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
-                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
-                    newCop.GetComponent<NewMonoBehaviourScript>().floor = floor;
+                    NewCop();
                     break;
                 case 2:
-                    //level2 cops
-                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
-                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
-                    newCop.GetComponent<NewMonoBehaviourScript>().floor = floor;
+                    //level2 cops (shooting in copscript)
+                    NewCop();
                     break;
                 case 3:
-                    //level3 cops
-                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
-                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
-                    newCop.GetComponent<NewMonoBehaviourScript>().floor = floor;
+                    //level3 cops (more cops)
+                    NewCop();
+                    NewCop();
                     break;
                 case 4:
-                    //level4 cops
-                    newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
-                    newCop.GetComponent<NewMonoBehaviourScript>().player = player;
-                    newCop.GetComponent<NewMonoBehaviourScript>().floor = floor;
+                    //level4 cops (more cops)
+                    NewCop();
+                    NewCop();
+                    NewCop();
                     break;
-            }  
+            } 
         }
+    }
+
+    private void NewCop()
+    {
+        newCop = GameObject.Instantiate(cop, new Vector2(player.transform.position.x - 9, 0), Quaternion.identity);
+        newCop.GetComponent<NewMonoBehaviourScript>().player = player;
+        newCop.GetComponent<NewMonoBehaviourScript>().floor = floor;
+        newCop.GetComponent<NewMonoBehaviourScript>().copManager = gameObject;
     }
 }

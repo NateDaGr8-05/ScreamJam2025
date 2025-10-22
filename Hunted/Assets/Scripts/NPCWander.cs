@@ -17,12 +17,21 @@ public class NPCWander : MonoBehaviour
     public float minX = -1.5f;
     public float maxX = 1.5f;
 
+    //Animation
+
+    private Animator animator;
+    private Vector2 lastPosition;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         npc = GetComponent<Rigidbody2D>();
         waitTimer = waitTime;
         ChooseNewDirection();
+
+        //Animation
+        animator = GetComponent<Animator>();
+        lastPosition = npc.position;
     }
 
     // Update is called once per frame
@@ -52,6 +61,19 @@ public class NPCWander : MonoBehaviour
         }
 
         ClampPosition();
+
+        //Animation
+        float moveDistance = (npc.position - lastPosition).magnitude;
+
+        if (moveDistance > 0.02f)
+        {
+            animator.SetBool("isWalking", true);
+            lastPosition = npc.position;
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 
     void ChooseNewDirection()

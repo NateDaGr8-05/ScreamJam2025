@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class NPCFlee : MonoBehaviour
 {
@@ -14,10 +14,19 @@ public class NPCFlee : MonoBehaviour
     private float fleeTimer;
     private bool isFleeing = false;
 
+    //Animation
+
+    private Animator animator;
+    private Vector2 lastPosition;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         wanderScript = GetComponent<NPCWander>();
+
+        //Animation
+        animator = GetComponent<Animator>();
+        lastPosition = rb.position;
     }
 
     void Update()
@@ -38,7 +47,7 @@ public class NPCFlee : MonoBehaviour
             {
                 nextPos.x = Mathf.Clamp(nextPos.x, wanderScript.minX, wanderScript.maxX);
 
-                // If we’ve hit the edge, stop fleeing motion
+                // If weï¿½ve hit the edge, stop fleeing motion
                 if (Mathf.Approximately(nextPos.x, wanderScript.minX) ||
                     Mathf.Approximately(nextPos.x, wanderScript.maxX))
                 {
@@ -62,6 +71,19 @@ public class NPCFlee : MonoBehaviour
                 StopFleeing();
             }
         }
+
+        float moveDistance = (rb.position - lastPosition).magnitude;
+
+        if (moveDistance > 0.02f)
+        {
+            animator.SetBool("isWalking", true);
+            lastPosition = rb.position;
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
